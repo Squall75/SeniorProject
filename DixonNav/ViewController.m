@@ -14,16 +14,27 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Call the init method implemented by the superclass
+    //self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        // Create location manager object
+        locationManager = [[CLLocationManager alloc] init];
+        
+        // And we want it to be as accurate as possible
+        // regardless of how much time/power it takes
+        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        
+        [locationManager startUpdatingLocation];
+        
+        
+    }
+    
+    return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

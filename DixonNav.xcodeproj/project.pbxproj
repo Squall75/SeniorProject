@@ -21,6 +21,7 @@
 		FA9F768618946CF000CCF23B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F766818946CF000CCF23B /* UIKit.framework */; };
 		FA9F768E18946CF000CCF23B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA9F768C18946CF000CCF23B /* InfoPlist.strings */; };
 		FA9F769018946CF000CCF23B /* DixonNavTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F768F18946CF000CCF23B /* DixonNavTests.m */; };
+		FA9F769A18947AAD00CCF23B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F769918947AAD00CCF23B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FA9F768B18946CF000CCF23B /* DixonNavTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DixonNavTests-Info.plist"; sourceTree = "<group>"; };
 		FA9F768D18946CF000CCF23B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA9F768F18946CF000CCF23B /* DixonNavTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DixonNavTests.m; sourceTree = "<group>"; };
+		FA9F769918947AAD00CCF23B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9F769A18947AAD00CCF23B /* CoreLocation.framework in Frameworks */,
 				FA9F766718946CF000CCF23B /* CoreGraphics.framework in Frameworks */,
 				FA9F766918946CF000CCF23B /* UIKit.framework in Frameworks */,
 				FA9F766518946CF000CCF23B /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		FA9F766318946CF000CCF23B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA9F769918947AAD00CCF23B /* CoreLocation.framework */,
 				FA9F766418946CF000CCF23B /* Foundation.framework */,
 				FA9F766618946CF000CCF23B /* CoreGraphics.framework */,
 				FA9F766818946CF000CCF23B /* UIKit.framework */,
