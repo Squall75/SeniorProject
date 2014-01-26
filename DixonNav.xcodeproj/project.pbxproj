@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA068EDB1894C56600A09020 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA068EDA1894C56600A09020 /* MapKit.framework */; };
 		FA9F766518946CF000CCF23B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F766418946CF000CCF23B /* Foundation.framework */; };
 		FA9F766718946CF000CCF23B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F766618946CF000CCF23B /* CoreGraphics.framework */; };
 		FA9F766918946CF000CCF23B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F766818946CF000CCF23B /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA068EDA1894C56600A09020 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA9F766118946CF000CCF23B /* DixonNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DixonNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9F766418946CF000CCF23B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA9F766618946CF000CCF23B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA068EDB1894C56600A09020 /* MapKit.framework in Frameworks */,
 				FA9F769A18947AAD00CCF23B /* CoreLocation.framework in Frameworks */,
 				FA9F766718946CF000CCF23B /* CoreGraphics.framework in Frameworks */,
 				FA9F766918946CF000CCF23B /* UIKit.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		FA9F766318946CF000CCF23B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA068EDA1894C56600A09020 /* MapKit.framework */,
 				FA9F769918947AAD00CCF23B /* CoreLocation.framework */,
 				FA9F766418946CF000CCF23B /* Foundation.framework */,
 				FA9F766618946CF000CCF23B /* CoreGraphics.framework */,
@@ -464,6 +468,7 @@
 				FA9F769518946CF000CCF23B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA9F769618946CF000CCF23B /* Build configuration list for PBXNativeTarget "DixonNavTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +477,7 @@
 				FA9F769818946CF000CCF23B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
