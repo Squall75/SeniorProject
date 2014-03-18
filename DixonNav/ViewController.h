@@ -13,14 +13,15 @@
 @interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
 {
     // Will interface with the location hardware
-    CLLocationManager *locationManager;
+    //CLLocationManager *locationManager;
     
     IBOutlet MKMapView *worldView;
     IBOutlet UIActivityIndicatorView *activityIndicator;
-    IBOutlet UITextField *locationTitleField;
+    //IBOutlet UITextField *locationTitleField;
+    IBOutlet UISegmentedControl *mapSwitch;
 }
 
-- (void)findLocation;
-- (void)foundLocation: (CLLocation *)loc;
+//- (void)findLocation;
+- (IBAction)changeSeg;
 
 @end
