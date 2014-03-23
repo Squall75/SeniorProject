@@ -24,6 +24,7 @@
 		FA9F768E18946CF000CCF23B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA9F768C18946CF000CCF23B /* InfoPlist.strings */; };
 		FA9F769018946CF000CCF23B /* DixonNavTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F768F18946CF000CCF23B /* DixonNavTests.m */; };
 		FA9F769A18947AAD00CCF23B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F769918947AAD00CCF23B /* CoreLocation.framework */; };
+		FAA7274518DDFF810061AADA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7274318DDFF800061AADA /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		FA9F768D18946CF000CCF23B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA9F768F18946CF000CCF23B /* DixonNavTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DixonNavTests.m; sourceTree = "<group>"; };
 		FA9F769918947AAD00CCF23B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FAA7274218DDFF800061AADA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FAA7274318DDFF800061AADA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				FA9F767318946CF000CCF23B /* AppDelegate.h */,
 				FA9F767418946CF000CCF23B /* AppDelegate.m */,
 				FA9F767618946CF000CCF23B /* Main.storyboard */,
+				FAA7274218DDFF800061AADA /* DetailViewController.h */,
+				FAA7274318DDFF800061AADA /* DetailViewController.m */,
 				FA9F767918946CF000CCF23B /* ViewController.h */,
 				FA9F767A18946CF000CCF23B /* ViewController.m */,
 				FA7C061F18958184004E4293 /* BNRMapPoint.h */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA7274518DDFF810061AADA /* DetailViewController.m in Sources */,
 				FA9F767B18946CF000CCF23B /* ViewController.m in Sources */,
 				FA9F767518946CF000CCF23B /* AppDelegate.m in Sources */,
 				FA7C062118958184004E4293 /* BNRMapPoint.m in Sources */,
@@ -394,9 +400,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DixonNav/DixonNav-Prefix.pch";
 				INFOPLIST_FILE = "DixonNav/DixonNav-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,9 +419,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DixonNav/DixonNav-Prefix.pch";
 				INFOPLIST_FILE = "DixonNav/DixonNav-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

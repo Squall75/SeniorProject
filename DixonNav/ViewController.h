@@ -16,12 +16,13 @@
     //CLLocationManager *locationManager;
     
     IBOutlet MKMapView *worldView;
-    IBOutlet UIActivityIndicatorView *activityIndicator;
+   // IBOutlet UIActivityIndicatorView *activityIndicator;
     //IBOutlet UITextField *locationTitleField;
     IBOutlet UISegmentedControl *mapSwitch;
 }
 
 //- (void)findLocation;
 - (IBAction)changeSeg;
+- (void)placeAnnotations:(CLLocationCoordinate2D)loc;
 
 @end
