@@ -14,6 +14,7 @@
 {
     
     __weak IBOutlet UILabel *pinTitle;
+    __weak IBOutlet UITextView *pinText;
 }
 @property (nonatomic, strong) BNRMapPoint *point;
 @end

@@ -25,6 +25,11 @@
 		FA9F769018946CF000CCF23B /* DixonNavTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F768F18946CF000CCF23B /* DixonNavTests.m */; };
 		FA9F769A18947AAD00CCF23B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F769918947AAD00CCF23B /* CoreLocation.framework */; };
 		FAA7274518DDFF810061AADA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7274318DDFF800061AADA /* DetailViewController.m */; };
+		FAA7274B18DF8A0F0061AADA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA7274A18DF8A0F0061AADA /* CoreData.framework */; };
+		FAA7274E18DF8AE80061AADA /* CbuBuildings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA7274C18DF8AE80061AADA /* CbuBuildings.xcdatamodeld */; };
+		FAA7275018DF91770061AADA /* CBUDirectory.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAA7274F18DF91770061AADA /* CBUDirectory.txt */; };
+		FAA7275318DF94590061AADA /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7275218DF94590061AADA /* Teacher.m */; };
+		FAA7275618DF95A50061AADA /* DatabaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7275518DF95A50061AADA /* DatabaseStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,13 @@
 		FA9F769918947AAD00CCF23B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FAA7274218DDFF800061AADA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FAA7274318DDFF800061AADA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FAA7274A18DF8A0F0061AADA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FAA7274D18DF8AE80061AADA /* CbuBuildings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CbuBuildings.xcdatamodel; sourceTree = "<group>"; };
+		FAA7274F18DF91770061AADA /* CBUDirectory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBUDirectory.txt; sourceTree = "<group>"; };
+		FAA7275118DF94590061AADA /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		FAA7275218DF94590061AADA /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
+		FAA7275418DF95A50061AADA /* DatabaseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseStore.h; path = DixonNav/DatabaseStore.h; sourceTree = "<group>"; };
+		FAA7275518DF95A50061AADA /* DatabaseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseStore.m; path = DixonNav/DatabaseStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA7274B18DF8A0F0061AADA /* CoreData.framework in Frameworks */,
 				FA068EDB1894C56600A09020 /* MapKit.framework in Frameworks */,
 				FA9F769A18947AAD00CCF23B /* CoreLocation.framework in Frameworks */,
 				FA9F766718946CF000CCF23B /* CoreGraphics.framework in Frameworks */,
@@ -94,6 +107,11 @@
 		FA9F765818946CF000CCF23B = {
 			isa = PBXGroup;
 			children = (
+				FAA7275118DF94590061AADA /* Teacher.h */,
+				FAA7275218DF94590061AADA /* Teacher.m */,
+				FAA7275418DF95A50061AADA /* DatabaseStore.h */,
+				FAA7275518DF95A50061AADA /* DatabaseStore.m */,
+				FAA7274C18DF8AE80061AADA /* CbuBuildings.xcdatamodeld */,
 				FA9F766A18946CF000CCF23B /* DixonNav */,
 				FA9F768918946CF000CCF23B /* DixonNavTests */,
 				FA9F766318946CF000CCF23B /* Frameworks */,
@@ -113,6 +131,7 @@
 		FA9F766318946CF000CCF23B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA7274A18DF8A0F0061AADA /* CoreData.framework */,
 				FA068EDA1894C56600A09020 /* MapKit.framework */,
 				FA9F769918947AAD00CCF23B /* CoreLocation.framework */,
 				FA9F766418946CF000CCF23B /* Foundation.framework */,
@@ -126,6 +145,7 @@
 		FA9F766A18946CF000CCF23B /* DixonNav */ = {
 			isa = PBXGroup;
 			children = (
+				FAA7274F18DF91770061AADA /* CBUDirectory.txt */,
 				FA9F767318946CF000CCF23B /* AppDelegate.h */,
 				FA9F767418946CF000CCF23B /* AppDelegate.m */,
 				FA9F767618946CF000CCF23B /* Main.storyboard */,
@@ -250,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9F767D18946CF000CCF23B /* Images.xcassets in Resources */,
+				FAA7275018DF91770061AADA /* CBUDirectory.txt in Resources */,
 				FA9F766F18946CF000CCF23B /* InfoPlist.strings in Resources */,
 				FA9F767818946CF000CCF23B /* Main.storyboard in Resources */,
 			);
@@ -271,9 +292,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA7274518DDFF810061AADA /* DetailViewController.m in Sources */,
+				FAA7275318DF94590061AADA /* Teacher.m in Sources */,
 				FA9F767B18946CF000CCF23B /* ViewController.m in Sources */,
 				FA9F767518946CF000CCF23B /* AppDelegate.m in Sources */,
+				FAA7275618DF95A50061AADA /* DatabaseStore.m in Sources */,
 				FA7C062118958184004E4293 /* BNRMapPoint.m in Sources */,
+				FAA7274E18DF8AE80061AADA /* CbuBuildings.xcdatamodeld in Sources */,
 				FA9F767118946CF000CCF23B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +527,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAA7274C18DF8AE80061AADA /* CbuBuildings.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA7274D18DF8AE80061AADA /* CbuBuildings.xcdatamodel */,
+			);
+			currentVersion = FAA7274D18DF8AE80061AADA /* CbuBuildings.xcdatamodel */;
+			path = CbuBuildings.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA9F765918946CF000CCF23B /* Project object */;
 }

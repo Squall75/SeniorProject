@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BNRMapPoint.h"
 #import "DetailViewController.h"
+#import "DatabaseStore.h"
 
 @interface ViewController ()
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Teacher" representedClassName="Teacher" syncable="YES">
+        <attribute name="tBox" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tDepartment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tOffice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Teacher" positionX="-63" positionY="-18" width="128" height="148"/>
+    </elements>
+</model>

@@ -8,6 +8,8 @@
 
 #import "DetailViewController.h"
 #import "BNRMapPoint.h"
+#import "DatabaseStore.h"
+#import "Teacher.h"
 
 @interface DetailViewController ()
 
@@ -25,6 +27,18 @@
     [super viewWillAppear:animated];
     
     [pinTitle setText:[point title]];
+    
+    NSArray *store = [[DatabaseStore defaultStore] allItems];
+    
+    NSString *text = @"Test Data";
+    
+    for (int i = 0; i < [store count]; i++)
+    {
+        NSLog(@"%@", [[store objectAtIndex:i]tName]);
+        text = [text stringByAppendingString:[[store objectAtIndex:i]tName]];
+    }
+    
+    [pinText setText:text];
     
     NSLog(@"title: %@", [point title]);
 }

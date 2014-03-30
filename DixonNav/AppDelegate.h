@@ -12,4 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(void) buildDatabase; // This method should only be used once to fill the store.data file
+
+-(NSArray*)readFile;
+
+
 @end
