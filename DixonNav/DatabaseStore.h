@@ -14,9 +14,10 @@
 @interface DatabaseStore : NSObject
 {
     NSMutableArray *allItems;
-    NSManagedObjectContext *context;
-    NSManagedObjectModel *model;
 }
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *context;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *model;
 
 + (DatabaseStore *)defaultStore; // makes sure only one instance of Database store is around
 
@@ -31,5 +32,7 @@
 - (BOOL)saveChanges;
 
 - (BOOL)isEmpty;
+
+- (NSArray *)getBuilding:(NSString *)building;
 
 @end

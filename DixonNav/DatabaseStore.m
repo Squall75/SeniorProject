@@ -11,6 +11,7 @@
 
 @implementation DatabaseStore
 
+
 + (DatabaseStore *)defaultStore
 {
     static DatabaseStore *defaultStore = nil;
@@ -25,15 +26,45 @@
     return [self defaultStore];
 }
 
+
+- (NSArray *)getBuilding:(NSString *)building
+{
+
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    // Grab only the buildings that contain the sent building name in tOffice
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"tOffice CONTAINS[cd] %@", building];
+    
+    NSEntityDescription *e = [[_model entitiesByName] objectForKey:@"Teacher"];
+    [request setEntity:e];
+    
+    NSSortDescriptor *sd = [NSSortDescriptor
+                            sortDescriptorWithKey:@"tName"
+                            ascending:YES];
+    [request setSortDescriptors:[NSArray arrayWithObject:sd]];
+    [request setPredicate:predicate];
+    
+    NSError *error;
+    NSArray *result = [_context executeFetchRequest:request error:&error];
+    if (!result) {
+        [NSException raise:@"Fetch failed"
+                    format:@"Reason: %@", [error localizedDescription]];
+    }
+    
+    NSArray *buildings = [[NSMutableArray alloc] initWithArray:result];
+    
+    return buildings;
+
+}
+
 - (id)init
 {
     self = [super init];
     if (self)
     {
         // Read in CbuBuildings.xcdatamodeld
-        model = [NSManagedObjectModel mergedModelFromBundles:nil];
+        _model = [NSManagedObjectModel mergedModelFromBundles:nil];
         
-        NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+        NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
         
         // Where does the SQLite file go
         NSString *path = [self itemArchivePath];
@@ -47,11 +78,11 @@
         }
         
         // Create the managed object context
-        context = [[NSManagedObjectContext alloc] init];
-        [context setPersistentStoreCoordinator:psc];
+        _context = [[NSManagedObjectContext alloc] init];
+        [_context setPersistentStoreCoordinator:psc];
         
         // Turn off undo
-        [context setUndoManager:nil];
+        [_context setUndoManager:nil];
         
         [self loadAllItems];
     }
@@ -64,7 +95,7 @@
     if (!allItems) {
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         
-        NSEntityDescription *e = [[model entitiesByName] objectForKey:@"Teacher"];
+        NSEntityDescription *e = [[_model entitiesByName] objectForKey:@"Teacher"];
         [request setEntity:e];
         
         NSSortDescriptor *sd = [NSSortDescriptor
@@ -73,7 +104,7 @@
         [request setSortDescriptors:[NSArray arrayWithObject:sd]];
         
         NSError *error;
-        NSArray *result = [context executeFetchRequest:request error:&error];
+        NSArray *result = [_context executeFetchRequest:request error:&error];
         if (!result) {
             [NSException raise:@"Fetch failed"
                         format:@"Reason: %@", [error localizedDescription]];
@@ -105,7 +136,7 @@
 {
     NSLog(@"Save Changes");
     NSError *err = nil;
-    BOOL successful = [context save:&err];
+    BOOL successful = [_context save:&err];
     
     NSLog(@"%@", err);
     
@@ -128,7 +159,7 @@
 {
     //NSLog(@"Adding a new teacher");
     
-    Teacher *t = [NSEntityDescription insertNewObjectForEntityForName:@"Teacher" inManagedObjectContext:context];
+    Teacher *t = [NSEntityDescription insertNewObjectForEntityForName:@"Teacher" inManagedObjectContext:_context];
     
     [allItems addObject:t];
 

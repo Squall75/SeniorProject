@@ -16,7 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    if ([[DatabaseStore defaultStore]isEmpty] == TRUE)
+    if ([[DatabaseStore defaultStore]isEmpty] == YES)
          {
              [self buildDatabase];
          }
@@ -143,6 +143,9 @@
         NSLog(@"Teacher: %@", [t tName]);
     }
      */
+    
+    [[DatabaseStore defaultStore] saveChanges];
+    
 }
 
 -(NSArray*)readFile

@@ -28,15 +28,49 @@
     
     [pinTitle setText:[point title]];
     
-    NSArray *store = [[DatabaseStore defaultStore] allItems];
+    //NSArray *store = [[DatabaseStore defaultStore] allItems];
     
-    NSString *text = @"Test Data";
+    NSArray *teachers = [[DatabaseStore defaultStore] getBuilding:[point title]];
     
-    for (int i = 0; i < [store count]; i++)
+    NSString *text = @"";
+    NSString *name, *title, *department, *office, *box, *phone, *email;
+    
+    
+    
+    for (int i = 0; i < [teachers count]; i++)
     {
-        NSLog(@"%@", [[store objectAtIndex:i]tName]);
-        text = [text stringByAppendingString:[[store objectAtIndex:i]tName]];
+        //NSLog(@"%@", [[teachers objectAtIndex:i]tOffice]);
+        name = [[teachers objectAtIndex:i]tName];
+        title = [[teachers objectAtIndex:i]tTitle];
+        department =[[teachers objectAtIndex:i]tDepartment];
+        office = [[teachers objectAtIndex:i]tOffice];
+        box = [[teachers objectAtIndex:i]tBox];
+        phone = [[teachers objectAtIndex:i]tPhone];
+        email = [[teachers objectAtIndex:i]tEmail];
+        //text= [text stringByAppendingString:[[teachers objectAtIndex:i]tName]];
+        //title =
+        //text = [text stringByAppendingString:@"\n"];
+        
+        text = [text stringByAppendingString:name];
+        text = [text stringByAppendingString:@"\n"];
+        text = [text stringByAppendingString:title];
+        text = [text stringByAppendingString:@"\n"];
+        text = [text stringByAppendingString:department];
+        text = [text stringByAppendingString:@"\n"];
+        text = [text stringByAppendingString:office];
+        text = [text stringByAppendingString:@"\n"];
+        text = [text stringByAppendingString:box];
+        text = [text stringByAppendingString:@"\n"];
+        text = [text stringByAppendingString:phone];
+        text = [text stringByAppendingString:@"\n"];
+        text = [text stringByAppendingString:email];
+        text = [text stringByAppendingString:@"\n"];
+        text = [text stringByAppendingString:@"\n"];
+        
+        
+        
     }
+    
     
     [pinText setText:text];
     
