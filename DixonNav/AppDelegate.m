@@ -148,6 +148,9 @@
     
 }
 
+/* Read in the CBUDirectory text file and send back an array of all of the strings contained in the 
+ * the file sepearated by the new line character.
+ */
 -(NSArray*)readFile
 
 {

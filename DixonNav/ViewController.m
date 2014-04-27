@@ -167,7 +167,7 @@
         _previousLocation = userLocation;
         
         //Set the area that we would like to zoom in on
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 150, 150);
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 100, 100);
         
         //Zoom in on the location of the user
         [worldView setRegion:region animated:YES];
